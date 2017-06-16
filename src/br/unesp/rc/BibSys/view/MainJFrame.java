@@ -5,6 +5,7 @@
  */
 package br.unesp.rc.BibSys.view;
 
+import java.io.File;
 import javax.swing.JDialog;
 import javax.swing.JFileChooser;
 
@@ -335,7 +336,8 @@ public class MainJFrame extends javax.swing.JFrame {
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         JFileChooser chooser = new JFileChooser();
         chooser.showOpenDialog(null);
-        chooser.setVisible(true);
+        File file =chooser.getSelectedFile();
+        String path = file.getAbsolutePath();
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
