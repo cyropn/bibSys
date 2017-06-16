@@ -5,6 +5,7 @@
  */
 package br.unesp.rc.BibSys.view;
 
+import javax.swing.JDialog;
 import javax.swing.JFileChooser;
 
 /**
@@ -290,6 +291,11 @@ public class MainJFrame extends javax.swing.JFrame {
         jMenu3.setText("Help");
 
         jMenuItem10.setText("About");
+        jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem10ActionPerformed(evt);
+            }
+        });
         jMenu3.add(jMenuItem10);
 
         jMenuBar1.add(jMenu3);
@@ -335,6 +341,12 @@ public class MainJFrame extends javax.swing.JFrame {
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
+        JDialog about = new AboutJDialog(this, true);
+        about.pack();
+        about.setVisible(true);
+    }//GEN-LAST:event_jMenuItem10ActionPerformed
 
     /**
      * @param args the command line arguments
