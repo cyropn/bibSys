@@ -19,6 +19,7 @@ public class Main {
      */
     public static void main(String[] args) {
         JFrame main = new MainJFrame();
+        main.setExtendedState(JFrame.MAXIMIZED_BOTH); 
         main.setVisible(true);
     }
     
