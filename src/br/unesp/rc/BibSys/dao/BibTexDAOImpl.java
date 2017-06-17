@@ -61,7 +61,16 @@ public class BibTexDAOImpl implements BibTexDAO{
      * @return          verdadeiro se o update foi realizado com sucesso, 
      *                  caso contrario retorna falso.
      */
-    public boolean update(String bibTex){
-        return false;
+    public boolean update(String bibTex, File file){
+        boolean b = false;
+        try {
+            FileWriter fw = new FileWriter(file);
+            fw.write(bibTex);
+            fw.flush();
+            b = true;
+        } catch (IOException ex) {
+            System.out.println("Error: " + ex.getMessage());
+        }
+        return b;
     }
 }
