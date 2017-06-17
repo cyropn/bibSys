@@ -64,21 +64,21 @@ public class MainJFrame extends javax.swing.JFrame {
         btn_sort = new javax.swing.JButton();
         sep_selection = new javax.swing.JSeparator();
         sep_operations = new javax.swing.JSeparator();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
+        topMenu = new javax.swing.JMenuBar();
+        topMenu_file = new javax.swing.JMenu();
+        topMenuItem_open = new javax.swing.JMenuItem();
+        topMenu_save = new javax.swing.JMenuItem();
+        topMenu_saveAs = new javax.swing.JMenuItem();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
-        jMenuItem4 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
-        jMenuItem5 = new javax.swing.JMenuItem();
-        jMenuItem6 = new javax.swing.JMenuItem();
-        jMenuItem7 = new javax.swing.JMenuItem();
-        jMenuItem8 = new javax.swing.JMenuItem();
-        jMenuItem9 = new javax.swing.JMenuItem();
-        jMenu3 = new javax.swing.JMenu();
-        jMenuItem10 = new javax.swing.JMenuItem();
+        topMenu_exit = new javax.swing.JMenuItem();
+        topMenu_edit = new javax.swing.JMenu();
+        topMenu_standarnize = new javax.swing.JMenuItem();
+        topMenu_compare = new javax.swing.JMenuItem();
+        topMenu_concatenate = new javax.swing.JMenuItem();
+        topMenu_sort = new javax.swing.JMenuItem();
+        topMenu_generateKey = new javax.swing.JMenuItem();
+        topMenu_help = new javax.swing.JMenu();
+        topMenuAbout = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("BibSys");
@@ -240,68 +240,68 @@ public class MainJFrame extends javax.swing.JFrame {
                     .addComponent(btn_sort, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)))
         );
 
-        jMenu1.setText("File");
+        topMenu_file.setText("File");
 
-        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem1.setText("Open");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        topMenuItem_open.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        topMenuItem_open.setText("Open");
+        topMenuItem_open.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                topMenuItem_openActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem1);
+        topMenu_file.add(topMenuItem_open);
 
-        jMenuItem3.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem3.setText("Save");
-        jMenu1.add(jMenuItem3);
+        topMenu_save.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_MASK));
+        topMenu_save.setText("Save");
+        topMenu_file.add(topMenu_save);
 
-        jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem2.setText("Save As...");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+        topMenu_saveAs.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        topMenu_saveAs.setText("Save As...");
+        topMenu_saveAs.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
+                topMenu_saveAsActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem2);
-        jMenu1.add(jSeparator1);
+        topMenu_file.add(topMenu_saveAs);
+        topMenu_file.add(jSeparator1);
 
-        jMenuItem4.setText("Exit");
-        jMenu1.add(jMenuItem4);
+        topMenu_exit.setText("Exit");
+        topMenu_file.add(topMenu_exit);
 
-        jMenuBar1.add(jMenu1);
+        topMenu.add(topMenu_file);
 
-        jMenu2.setText("Edit");
+        topMenu_edit.setText("Edit");
 
-        jMenuItem5.setText("Standarnize");
-        jMenu2.add(jMenuItem5);
+        topMenu_standarnize.setText("Standarnize");
+        topMenu_edit.add(topMenu_standarnize);
 
-        jMenuItem6.setText("Compare");
-        jMenu2.add(jMenuItem6);
+        topMenu_compare.setText("Compare");
+        topMenu_edit.add(topMenu_compare);
 
-        jMenuItem7.setText("Concatenate");
-        jMenu2.add(jMenuItem7);
+        topMenu_concatenate.setText("Concatenate");
+        topMenu_edit.add(topMenu_concatenate);
 
-        jMenuItem8.setText("Sort by BibKey");
-        jMenu2.add(jMenuItem8);
+        topMenu_sort.setText("Sort by BibKey");
+        topMenu_edit.add(topMenu_sort);
 
-        jMenuItem9.setText("Generate BibKey");
-        jMenu2.add(jMenuItem9);
+        topMenu_generateKey.setText("Generate BibKey");
+        topMenu_edit.add(topMenu_generateKey);
 
-        jMenuBar1.add(jMenu2);
+        topMenu.add(topMenu_edit);
 
-        jMenu3.setText("Help");
+        topMenu_help.setText("Help");
 
-        jMenuItem10.setText("About");
-        jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
+        topMenuAbout.setText("About");
+        topMenuAbout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem10ActionPerformed(evt);
+                topMenuAboutActionPerformed(evt);
             }
         });
-        jMenu3.add(jMenuItem10);
+        topMenu_help.add(topMenuAbout);
 
-        jMenuBar1.add(jMenu3);
+        topMenu.add(topMenu_help);
 
-        setJMenuBar(jMenuBar1);
+        setJMenuBar(topMenu);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -333,7 +333,7 @@ public class MainJFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void topMenuItem_openActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_topMenuItem_openActionPerformed
         JFileChooser chooser = new JFileChooser();
         chooser.setDialogTitle("Open file");
         int userSelection = chooser.showOpenDialog(null);
@@ -342,9 +342,9 @@ public class MainJFrame extends javax.swing.JFrame {
             String path = file.getAbsolutePath();
             System.out.println("File: " + file.getAbsolutePath());
         }
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    }//GEN-LAST:event_topMenuItem_openActionPerformed
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+    private void topMenu_saveAsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_topMenu_saveAsActionPerformed
         JFileChooser chooser = new JFileChooser();
         chooser.setDialogTitle("Save as...");
         int userSelection = chooser.showSaveDialog(null);
@@ -352,13 +352,13 @@ public class MainJFrame extends javax.swing.JFrame {
             File file = chooser.getSelectedFile();
             System.out.println("Save as file: " + file.getAbsolutePath()+".bib");
         }
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
+    }//GEN-LAST:event_topMenu_saveAsActionPerformed
 
-    private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
+    private void topMenuAboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_topMenuAboutActionPerformed
         JDialog about = new AboutJDialog(this, true);
         about.pack();
         about.setVisible(true);
-    }//GEN-LAST:event_jMenuItem10ActionPerformed
+    }//GEN-LAST:event_topMenuAboutActionPerformed
 
     /**
      * @param args the command line arguments
@@ -413,20 +413,6 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JTextField field_bibKey;
     private javax.swing.JTextField field_month;
     private javax.swing.JTextField field_year;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem10;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
-    private javax.swing.JMenuItem jMenuItem7;
-    private javax.swing.JMenuItem jMenuItem8;
-    private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JLabel lbl_BibTexTitle;
     private javax.swing.JLabel lbl_author;
@@ -442,6 +428,20 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JTabbedPane tab_Files;
     private javax.swing.JTabbedPane tab_Selected;
     private javax.swing.JPanel topButtonsPanel;
+    private javax.swing.JMenuBar topMenu;
+    private javax.swing.JMenuItem topMenuAbout;
+    private javax.swing.JMenuItem topMenuItem_open;
+    private javax.swing.JMenuItem topMenu_compare;
+    private javax.swing.JMenuItem topMenu_concatenate;
+    private javax.swing.JMenu topMenu_edit;
+    private javax.swing.JMenuItem topMenu_exit;
+    private javax.swing.JMenu topMenu_file;
+    private javax.swing.JMenuItem topMenu_generateKey;
+    private javax.swing.JMenu topMenu_help;
+    private javax.swing.JMenuItem topMenu_save;
+    private javax.swing.JMenuItem topMenu_saveAs;
+    private javax.swing.JMenuItem topMenu_sort;
+    private javax.swing.JMenuItem topMenu_standarnize;
     private javax.swing.JTree tree_Files;
     private javax.swing.JTree tree_Selected;
     // End of variables declaration//GEN-END:variables
